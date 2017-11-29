@@ -18,7 +18,6 @@ from django.contrib import admin
 # from kakao import views as keyboard
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     # url(r'^keyboard/', 'kakao.views.keyboard'),
     url(r'', include('kakao.urls')),
 
