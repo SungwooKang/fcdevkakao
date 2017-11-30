@@ -77,9 +77,12 @@ def message(request):
             })
         else:
             return JsonResponse({
-
-                'keyboard': {
-                    'type': 'text'
-                }     
-            
             })
+    
+            # return JsonResponse({
+
+            #     'keyboard': {
+            #         'type': 'text'
+            #     }     
+            
+            # })
