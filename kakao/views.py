@@ -64,13 +64,21 @@ def message(request):
                     'buttons': ['파트타임 교육 과정','풀타임 교육 과정', '기타']
                 }
             })
-        else:
+        elif return_str == '기타':
             return JsonResponse({
 
                 'message': {
                     'text': '담당자를 연결해드리겠습니다. 잠시만 기다려주세요.'
                 },
-                    'keyboard': {
+                'keyboard': {
+                    'type': 'text'
+                }     
+            
+            })
+        else:
+            return JsonResponse({
+
+                'keyboard': {
                     'type': 'text'
                 }     
             
