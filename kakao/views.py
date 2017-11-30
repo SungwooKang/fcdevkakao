@@ -27,7 +27,7 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['과정1','과정2']
+                    'buttons': ['과정1','과정2', '초기화']
                 }
             })
         elif  return_str == '과정1':
@@ -38,7 +38,7 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['가격']
+                    'buttons': ['가격', '초기화']
                 }
         })
 
@@ -50,7 +50,18 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['안드로이드 개발 SCHOOL','iOS 개발 SCHOOL', '웹 프로그래밍 SCHOOL', '프론트엔드 개발 SCHOOL']
+                    'buttons': ['안드로이드 개발 SCHOOL','iOS 개발 SCHOOL', '웹 프로그래밍 SCHOOL', '프론트엔드 개발 SCHOOL', '기타', '초기화']
+                }
+            })
+        elif return_str == '초기화':
+            return JsonResponse({
+
+                'message': {
+                    'text': return_str + '을(를) 선택하셨습니다. 처음부터 선택해주시기 바랍니다.'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['파트타임 교육 과정','풀타임 교육 과정', '기타']
                 }
             })
         else:
