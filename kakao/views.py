@@ -23,7 +23,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을(를) 선택하셨습니다. 이어서 선택해주시기 바랍니다.'
+                    'text': return_str + '을 선택하셨습니다. 이어서 선택해주시기 바랍니다.'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -34,7 +34,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을(를) 선택하셨습니다아~. 이어서 선택해주시기 바랍니다.'
+                    'text': return_str + '을 선택하셨습니다아~. 이어서 선택해주시기 바랍니다.'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -46,7 +46,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을(를) 선택하셨습니다. 이어서 선택해주시기 바랍니다.'
+                    'text': return_str + '을 선택하셨습니다. 이어서 선택해주시기 바랍니다.'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -57,7 +57,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + '담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + ' 담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
                 }
 
             })
@@ -65,7 +65,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + '담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + ' 담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
                 }
 
             })
@@ -73,7 +73,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + '담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + ' 담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
                 }
 
             })
@@ -81,7 +81,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + '담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + ' 담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
                 }
 
             })
@@ -89,7 +89,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을(를) 선택하셨습니다. 처음부터 선택해주시기 바랍니다.'
+                    'text': '처음부터 선택해주시기 바랍니다.'
                 },
                 'keyboard': {
                     'type': 'buttons',
