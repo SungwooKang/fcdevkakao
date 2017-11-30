@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*- 
+
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -16,13 +18,7 @@ def message(request):
         message = ((request.body).decode('utf-8'))
         return_json_str = json.loads(message)
         return_str = return_json_str['content']
-             # 'message': {
-            #     'text': return_str + '을(를) 선택하셨습니다. 이어서 선택해주시기 바랍니다.'
-            # },
-            # 'keyboard': {
-            #     'type': 'buttons',
-            #     'buttons': ['안드로이드 개발 SCHOOL','iOS 개발 SCHOOL', '웹 프로그래밍 SCHOOL', '프론트엔드 개발 SCHOOL']
-            # }
+
         if  return_str == '파트타임 교육 과정':
             return JsonResponse({
 
@@ -31,9 +27,21 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['안드로이드 개발 SCHOOL','iOS 개발 SCHOOL', '웹 프로그래밍 SCHOOL', '프론트엔드 개발 SCHOOL']
+                    'buttons': ['과정1','과정2']
                 }
             })
+        elif  return_str == '과정1':
+            return JsonResponse({
+
+                'message': {
+                    'text': return_str + '을(를) 선택하셨습니다아~. 이어서 선택해주시기 바랍니다.'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가격']
+                }
+        })
+
         elif return_str == '풀타임 교육 과정':
             return JsonResponse({
 
