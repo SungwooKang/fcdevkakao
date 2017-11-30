@@ -27,7 +27,7 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['과정1','과정2', '초기화']
+                    'buttons': ['과정1','과정2', '처음으로']
                 }
             })
         elif  return_str == '과정1':
@@ -38,7 +38,7 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['가격', '초기화']
+                    'buttons': ['가격', '처음으로']
                 }
         })
 
@@ -50,10 +50,42 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['안드로이드 개발 SCHOOL','iOS 개발 SCHOOL', '웹 프로그래밍 SCHOOL', '프론트엔드 개발 SCHOOL', '기타', '초기화']
+                    'buttons': ['안드로이드 개발 SCHOOL','iOS 개발 SCHOOL', '웹 프로그래밍 SCHOOL', '프론트엔드 개발 SCHOOL', '기타', '처음으로']
                 }
             })
-        elif return_str == '초기화':
+        elif return_str == '안드로이드 개발 SCHOOL':
+            return JsonResponse({
+
+                'message': {
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + '담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                }
+
+            })
+        elif return_str == 'iOS 개발 SCHOOL':
+            return JsonResponse({
+
+                'message': {
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + '담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                }
+
+            })
+        elif return_str == '웹 프로그래밍 SCHOOL':
+            return JsonResponse({
+
+                'message': {
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + '담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                }
+
+            })
+        elif return_str == '프론트엔드 개발 SCHOOL':
+            return JsonResponse({
+
+                'message': {
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + '담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                }
+
+            })
+        elif return_str == '처음으로':
             return JsonResponse({
 
                 'message': {
@@ -68,7 +100,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': '담당자를 연결해드리겠습니다. 잠시만 기다려주세요.'
+                    'text': '입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면 담당자를 연결해드리겠습니다. 잠시만 기다려주세요:)'
                 },
                 'keyboard': {
                     'type': 'text'
