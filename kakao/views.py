@@ -10,7 +10,7 @@ def keyboard(request):
 
     return JsonResponse({
         'type' : 'buttons',
-        'buttons' : ['파트타임 교육 과정','풀타임 교육 과정', '기타']
+        'buttons' : ['실무 맞춤형 교육 (저녁/주말)','취업 연계 과정 (4개월 전일제)', '기타']
     })
 
 @csrf_exempt
@@ -19,7 +19,7 @@ def message(request):
         return_json_str = json.loads(message)
         return_str = return_json_str['content']
 
-        if  return_str == '파트타임 교육 과정':
+        if  return_str == '실무 맞춤형 교육 (저녁/주말)':
             return JsonResponse({
 
                 'message': {
@@ -27,22 +27,22 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['과정1','과정2', '처음으로']
+                    'buttons': ['미구현1','미구현2', '처음으로']
                 }
             })
-        elif  return_str == '과정1':
-            return JsonResponse({
+        # elif  return_str == '과정1':
+        #     return JsonResponse({
 
-                'message': {
-                    'text': return_str + '을 선택하셨습니다아~. 이어서 선택해주시기 바랍니다.'
-                },
-                'keyboard': {
-                    'type': 'buttons',
-                    'buttons': ['가격', '처음으로']
-                }
-        })
+        #         'message': {
+        #             'text': return_str + '을 선택하셨습니다아~. 이어서 선택해주시기 바랍니다.'
+        #         },
+        #         'keyboard': {
+        #             'type': 'buttons',
+        #             'buttons': ['가격', '처음으로']
+        #         }
+        # })
 
-        elif return_str == '풀타임 교육 과정':
+        elif return_str == '취업 연계 과정 (4개월 전일제)':
             return JsonResponse({
 
                 'message': {
@@ -93,7 +93,7 @@ def message(request):
                 },
                 'keyboard': {
                     'type': 'buttons',
-                    'buttons': ['파트타임 교육 과정','풀타임 교육 과정', '기타']
+                    'buttons': ['실무 맞춤형 교육 (저녁/주말)','취업 연계 과정 (4개월 전일제)', '기타']
                 }
             })
         elif return_str == '기타':
