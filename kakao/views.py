@@ -60,8 +60,7 @@ def message(request):
                     'text': '담당자를 연결해드리겠습니다. 잠시만 기다려주세요.'
                 },
                     'keyboard': {
-                    'type': 'buttons',
-                    'buttons': ['안드로이드 개발 SCHOOL','iOS 개발 SCHOOL', '웹 프로그래밍 SCHOOL', '프론트엔드 개발 SCHOOL']
+                    'type': 'text'
                 }     
             
             })
