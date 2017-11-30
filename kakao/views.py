@@ -57,7 +57,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + ' 담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 말풍선 버튼을 누른 후 말을 걸어주시면, 담당자를 빠르게 불러 드리겠습니다. \n *반드시 1:1 말풍선 버튼을 누른 후 말을 걸어주세요!'
                 }
 
             })
@@ -65,7 +65,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + ' 담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 말풍선 버튼을 누른 후 말을 걸어주시면, 담당자를 빠르게 불러 드리겠습니다. \n *반드시 1:1 말풍선 버튼을 누른 후 말을 걸어주세요!'
                 }
 
             })
@@ -73,7 +73,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + ' 담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 말풍선 버튼을 누른 후 말을 걸어주시면, 담당자를 빠르게 불러 드리겠습니다. \n *반드시 1:1 말풍선 버튼을 누른 후 말을 걸어주세요!'
                 }
 
             })
@@ -81,7 +81,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면, ' + return_str + ' 담당자를 불러드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': return_str + '을 선택하셨습니다. 입력창 우측에 1:1 말풍선 버튼을 누른 후 말을 걸어주시면, 담당자를 빠르게 불러 드리겠습니다. \n *반드시 1:1 말풍선 버튼을 누른 후 말을 걸어주세요!'
                 }
 
             })
@@ -100,7 +100,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': '입력창 우측에 1:1 버튼 눌러서 말을 걸어주시면 담당자를 연결해드리겠습니다. 잠시만 기다려주세요:)'
+                    'text': '입력창 우측에 1:1 말풍선 버튼을 누른 후 말을 걸어주시면, 담당자를 빠르게 불러 드리겠습니다. \n *반드시 1:1 말풍선 버튼을 누른 후 말을 걸어주세요!'
                 },
                 'keyboard': {
                     'type': 'text'
