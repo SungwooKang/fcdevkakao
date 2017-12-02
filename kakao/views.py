@@ -20,6 +20,7 @@ def message(request):
         message = ((request.body).decode('utf-8'))
         return_json_str = json.loads(message)
         return_str = return_json_str['content']
+        kkk = models.lotto()
 
         if  return_str == '실무 맞춤형 교육 (저녁/주말)':
             return JsonResponse({
@@ -103,7 +104,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': models.lotto()
+                    'text': kkk
                 }
 
             })
