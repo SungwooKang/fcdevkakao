@@ -110,11 +110,11 @@ def message(request):
             c1 = count[2]
             c2 = c1[1:-1]
             c3 = "제 {0} 회차 로또 당첨 번호는 {1}, {2}, {3}, {4}, {5}, {6} 이며, 2등 당첨 번호는 {7} 입니다.".format(count[0], numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6])
-            
+
             return JsonResponse({
 
                 'message': {
-                    'text': c2 + '\n' +c3
+                    'text': c3
                 }
 
             })
