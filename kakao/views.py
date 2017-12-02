@@ -4,13 +4,14 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
+import models
 # Create your views here.
 
 def keyboard(request):
 
     return JsonResponse({
         'type' : 'buttons',
-        'buttons' : ['실무 맞춤형 교육 (저녁/주말)','취업 연계 과정 (4개월 전일제)', '기타']
+        'buttons' : ['실무 맞춤형 교육 (저녁/주말)','취업 연계 과정 (4개월 전일제)', '기타', '로또']
     })
 
 @csrf_exempt
@@ -30,17 +31,6 @@ def message(request):
                     'buttons': ['미구현1','미구현2', '처음으로']
                 }
             })
-        # elif  return_str == '과정1':
-        #     return JsonResponse({
-
-        #         'message': {
-        #             'text': return_str + '을 선택하셨습니다아~. 이어서 선택해주시기 바랍니다.'
-        #         },
-        #         'keyboard': {
-        #             'type': 'buttons',
-        #             'buttons': ['가격', '처음으로']
-        #         }
-        # })
 
         elif return_str == '취업 연계 과정 (4개월 전일제)':
             return JsonResponse({
@@ -61,6 +51,7 @@ def message(request):
                 }
 
             })
+
         elif return_str == 'iOS 개발 SCHOOL':
             return JsonResponse({
 
@@ -106,6 +97,14 @@ def message(request):
                     'type': 'text'
                 }     
             
+            })
+        elif return_str == '로또':
+            return JsonResponse({
+
+                'message': {
+                    'text': models.lotto
+                }
+
             })
         else:
          

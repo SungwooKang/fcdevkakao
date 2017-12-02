@@ -1,0 +1,10 @@
+{
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        "./kakao",
+        "-p",
+        "test*.py"
+    ],
+    "python.unitTest.unittestEnabled": true
+}
