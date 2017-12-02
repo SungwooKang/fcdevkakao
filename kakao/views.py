@@ -11,7 +11,7 @@ def keyboard(request):
 
     return JsonResponse({
         'type' : 'buttons',
-        'buttons' : ['실무 맞춤형 교육 (저녁/주말)','취업 연계 과정 (4개월 전일제)', '기타', '로또']
+        'buttons' : ['실무 맞춤형 교육 (저녁/주말)','취업 연계 과정 (4개월 전일제)', '기타']
     })
     
 
@@ -20,7 +20,7 @@ def message(request):
         message = ((request.body).decode('utf-8'))
         return_json_str = json.loads(message)
         return_str = return_json_str['content']
-        kkk = models.lotto()
+        # kkk = models.lotto()
 
         if  return_str == '실무 맞춤형 교육 (저녁/주말)':
             return JsonResponse({
@@ -100,14 +100,14 @@ def message(request):
                 }     
             
             })
-        elif return_str == '로또':
-            return JsonResponse({
+        # elif return_str == '로또':
+        #     return JsonResponse({
 
-                'message': {
-                    'text': kkk
-                }
+        #         'message': {
+        #             'text': kkk
+        #         }
 
-            })
+        #     })
         else:
          
             return JsonResponse({
