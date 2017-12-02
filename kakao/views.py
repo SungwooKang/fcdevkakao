@@ -13,6 +13,7 @@ def keyboard(request):
         'type' : 'buttons',
         'buttons' : ['실무 맞춤형 교육 (저녁/주말)','취업 연계 과정 (4개월 전일제)', '기타', '로또']
     })
+    
 
 @csrf_exempt
 def message(request):
@@ -102,7 +103,7 @@ def message(request):
             return JsonResponse({
 
                 'message': {
-                    'text': models.lotto
+                    'text': models.lotto()
                 }
 
             })
